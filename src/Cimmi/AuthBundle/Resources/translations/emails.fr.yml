@@ -1,0 +1,6 @@
+registration:
+    confirmation:
+        title:                  'Confirmation de votre inscription'
+        welcome:                'Bienvenue %firstName% %lastName%!'
+        activate_account:       'Pour activer votre compte, veillez cliquer sur le lien suivant : %url% .'
+

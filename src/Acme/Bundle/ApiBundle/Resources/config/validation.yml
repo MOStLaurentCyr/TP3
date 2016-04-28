@@ -1,0 +1,53 @@
+Cimmi\AuthBundle\Entity\User:
+    properties:
+        email:
+            - Email:
+            - NotBlank:    
+                message: "You must provide a valid email."
+        password:
+            - NotBlank: 
+                message: "You must provide a password."
+            - Length:
+                min: 3
+                minMessage: "Your password must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "Your password is too long."
+        firstName:
+            - Length:
+                min: 3
+                minMessage: "Your firstname must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "Your firstname is too long."
+        lastName:
+            - Length:
+                min: 3
+                minMessage: "Your lastname must have at least {{ limit }} characters."
+                max: 255
+                maxMessage: "Your lastname is too long."
+            - NotBlank: 
+                message: "You must provide a lastname."
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: username
+
+Acme\Bundle\ApiBundle\Model\Contact:
+    properties:
+        email:
+            - Email:
+            - NotBlank:    
+                message: "You must provide a valid email."
+        reason:
+            - NotBlank:    
+                message: "You must provide a reason."
+        name:
+            - NotBlank:    
+                message: "You must provide a name."
+        body:
+            - NotBlank:    
+                message: "You must provide a message body."
+
+Acme\Bundle\ApiBundle\Entity\Fav:
+    properties:
+        movieId:
+            - NotBlank:    
+                message: "You must provide a valid movieId."

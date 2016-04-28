@@ -1,0 +1,42 @@
+login:
+    actions:
+        register:           'Créer un compte étudiant'
+        forgot_password:    'Mot de passe oublié'
+    email:                  'Adresse de courriel'
+
+registration:
+    password:                               'Mot de passe'
+    password_confirm:                       'Confirmation mot de passe'
+    email:                                  'Courriel'
+    form_title_student:                     "Inscription d'un étudiant"
+    form_title_ac:                          "Inscription d'un administrateur cégep"
+    form_title_csa:                         "Inscription d'un conseiller en services adaptés"
+    username:                               "Nom d'utilisateur"
+    firstName:                              'Prénom'
+    lastName:                               'Nom de famille'
+    matricule:                              'Matricule'
+    cegep:                                  'Cégep'
+    submit:                                 'Soumettre'
+    student_permanent_code:                 'Code permanent'
+    student_permanent_code_confirm:         'Confirmation code permanent'
+    phone_number:                           'Numéro de téléphone'
+    choose_cegep:                           'Veillez choisir votre cégep'
+
+resetting:
+    request:
+        title:              'Mot de passe oublié'
+        description:        "Entrez votre adresse de courriel afin de réinitialiser votre mot de passe"
+        submit:             'Réinitialiser le mot de passe'
+        email:              'Adresse de courriel'
+        invalid_email:      'Le courriel "%email%" est invalide ou introuvable'
+    reset:
+        form_title:         'Réinitialisation du mot de passe'
+
+csa:
+    index:
+        create_csa:     'Créer un conseiller en service adapté'
+        columns:
+            name:       'Nom'
+            email:      'Adresse de courriel'
+            cegep:      'Cégep'
+

@@ -1,0 +1,11 @@
+Cimmi\AuthBundle\Entity\User:
+    exclusion_policy: ALL
+    xml_root_name:    user
+    access_order:     alphabetical
+    properties:
+        firstname:
+            expose: true
+            groups: [Default, register]
+        lastname:
+            expose: true
+            groups: [Default, register]

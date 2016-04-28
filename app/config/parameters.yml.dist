@@ -1,0 +1,33 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+
+    #Ajouter les commandes suivantes à votre fichier ~/.bashrc.
+    #export SYMFONY_BD_HOST="127.0.0.1"
+    #export SYMFONY_BD_NAME="appx"
+    #export SYMFONY_BD_USER="root"
+    #export SYMFONY_BD_PORT="3306"
+    #export SYMFONY_BD_PASS=""
+    #export SYMFONY_BD_DRIVER="pdo_mysql"
+
+    #These parameters are defined in parameters.php
+    #database_driver:   ~
+    #database_host:     ~
+    #database_port:     ~
+    #database_name:     ~
+    #database_user:     ~
+    #database_password: ~
+
+    mailer_transport:  gmail
+    #mailer_host:      127.0.0.1
+    mailer_user:       appx@gmail.com
+    mailer_password:   appx
+
+    private_key_path:  %kernel.root_dir%/var/jwt/private.pem
+    public_key_path:   %kernel.root_dir%/var/jwt/public.pem
+    pass_phrase:       1234
+    token_ttl:         604800 # 24h=86400   7j=604800
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            1c3b83b3e7c4c9e28dc8c5d8e51e53769c690204

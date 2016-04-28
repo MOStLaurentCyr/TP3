@@ -1,0 +1,5 @@
+copyright:
+    all_right_reserved: 'Tous droits réservées'
+
+Next:             'Suivant'     #KnpPaginatorBundle
+Previous:         'Précédent'   #KnpPaginatorBundle

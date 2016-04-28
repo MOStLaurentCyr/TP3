@@ -1,0 +1,23 @@
+Acme\Bundle\ApiBundle\Entity\Comment:
+    exclusion_policy: ALL
+    xml_root_name:    comment
+    access_order:     alphabetical
+    properties:
+        id:
+            expose: true
+            groups: [comment, list, created]
+        body:
+            expose: true
+            groups: [comment, create, created]
+        user:
+            expose: true
+            groups: [comment, created]
+        movieId:
+            expose: true
+            groups: [comment, create, created]
+        status:
+            expose: true
+            groups: [comment, create, created]
+        dateCreated:
+            expose: false
+            groups: [comment, created]

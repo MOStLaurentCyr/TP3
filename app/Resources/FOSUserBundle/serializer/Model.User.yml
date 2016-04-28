@@ -1,0 +1,43 @@
+FOS\UserBundle\Model\User:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [register, comment]
+        username:
+            type: string
+            expose: true
+            groups: [register, comment]
+        usernameCanonical:
+            type: string
+            expose: false
+            exclude: true
+        email:
+            type: string
+            expose: true
+            groups: [register]
+        roles:
+            expose: true
+            groups: [register]
+        enabled:
+            type: boolean
+            expose: false
+        locked:
+            type: boolean
+            expose: false
+        last_login:
+            type: datetime
+            expose: true
+        updated_at:
+            type: datetime
+            expose: true
+        created_at:
+            type: datetime
+            expose: true
+        plain_password:
+            type: string
+            expose: false
+        password:
+            type: string
+            expose: false

@@ -1,0 +1,26 @@
+# Login
+login_check:
+    path: /login_check
+    requirements:
+        _method: POST
+
+# REST
+acme_api_comment:
+    type:           rest
+    resource:       Acme\Bundle\ApiBundle\Controller\Rest\CommentController
+
+acme_api_fav:
+    type:           rest
+    resource:       Acme\Bundle\ApiBundle\Controller\Rest\FavController
+
+acme_api_register:
+    type:           rest
+    resource:       Acme\Bundle\ApiBundle\Controller\Rest\RegisterController
+
+acme_api_contact:
+    type:           rest
+    resource:       Acme\Bundle\ApiBundle\Controller\Rest\ContactController
+
+acme_api_login:
+    type:           rest
+    resource:       Acme\Bundle\ApiBundle\Controller\AuthenticationController

@@ -1,0 +1,8 @@
+services:
+#    cimmi_auth.example:
+#        class: Cimmi\AuthBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+    cimmi_auth.mailer:
+        class: Cimmi\AuthBundle\Services\AuthenticationMailer
+        arguments: ["@service_container"]

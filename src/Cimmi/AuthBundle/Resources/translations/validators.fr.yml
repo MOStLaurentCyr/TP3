@@ -1,0 +1,11 @@
+field:
+    required:     'Ce champ est requis'
+    mismatch:     'Les champs ne sont pas identiques'
+
+entity:
+    user:
+        invalid:
+            phone_number:                       'Le format du numéro de téléphone est invalide'
+            student_permanent_code:             'Le format du code permanent est invalide (AAAA########)'
+        in_use:
+            student_permanent_code:             "Ce code permanent est déjà utilisé"

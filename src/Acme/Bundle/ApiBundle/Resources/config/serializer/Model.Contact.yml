@@ -1,0 +1,16 @@
+Acme\Bundle\ApiBundle\Model\Contact:
+    exclusion_policy: ALL
+    access_order:     alphabetical
+    properties:
+        body:
+            type: string
+            expose: true
+        reason:
+            type: string
+            expose: true
+        email:
+            type: string
+            expose: true
+        name:
+            type: string
+            expose: true
