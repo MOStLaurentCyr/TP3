@@ -1,0 +1,21 @@
+<form name="searchForm" ng-controller="RechercherCtrl">
+			<input type="text" ng-model="search" id="txtSearch"><span ng-show="search.$touched">Entrez un titre ou un ou plusieurs mot(s) clé(s).</span>
+			<button type="submit" id="btnSubmit" ng-model="searchButton" ng-disable="searchForm.$invalid" ng-click='recherche() && searchForm.setSubmitted()'>Rechercher</button>	
+				
+			<div name=formSubmitted>
+				<ul style="list-style-type:none">
+   					<li ng-repeat="movie in movies">
+	   					<img ng-src="{{movie.Poster}}"alt="Poster" onerror="this.src='http://academics-lmu.com/wp-content/uploads/2014/09/default.png'"></br>
+	   					<label>{{movie.Title}}<label>
+	   					<label>{{movie.Year}}</label>
+   					</li>
+				</ul>
+		</div>
+		</form>
+ 
+
+		<div ng-show="errorMsg" class="error">
+		Une ereur s'est produite.
+		</div> 
+
+

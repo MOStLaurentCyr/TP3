@@ -1,0 +1,28 @@
+<div class="col-md-12">
+<ul style="list-style-type:none">
+   <li ng-repeat="film in films">
+   		<img ng-src="{{film.Poster}}" alt="Poster" onerror="this.src='http://academics-lmu.com/wp-content/uploads/2014/09/default.png'"></br>
+
+
+   		<a href="" ng-click="showComments(film.imdbID); commentVisible = !commentVisible">{{film.Title}}</a>{{commentError}}
+
+
+   		
+   			<ul >
+   				<div ng-show="commentVisible">
+   					<textarea rows="5" cols="80" ng-model="newComment"></textarea>
+   					<button ng-click="addComment(film.imdbID, newComment); newComment=''">Ajouter Commentaire</button>
+   					<li ng-repeat="comment in comments">
+   					<div ng-hide="modify">{{comment.body}}<label style="margin-left: 30px">Auteur:</label>{{comment.user.username}}  <label style="margin-left: 30px">Date de creation:</label>{{comment.date_created}}</br>
+   					<button style="margin-right: 30px" ng-click="modify = !modify; getComment(comment.id)">Modifier</button><button ng-click="deleteComment(comment.id, film.imdbID)">Supprimer</button></div>
+   					<div ng-show=modify><textarea rows="5" cols="80" ng-model="modifiedComment"></textarea></br><button style="margin-right: 30px" ng-click="modifyComment(modifiedComment, comment.id); modify = !modify">Accepter</button><button ng-click="modify = !modify">Annuler</button></div>
+   					</li>
+				</div>
+   			</ul>
+	
+
+
+   </li>
+</ul>
+{{errorMessage}}
+</div>
