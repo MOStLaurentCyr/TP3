@@ -24,3 +24,7 @@ acme_api_contact:
 acme_api_login:
     type:           rest
     resource:       Acme\Bundle\ApiBundle\Controller\AuthenticationController
+
+acme_api_movie_evaluation:
+    type:           rest
+    resource:      Acme\Bundle\ApiBundle\Controller\EvaluationController

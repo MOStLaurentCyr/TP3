@@ -1,0 +1,13 @@
+
+	<form name="loginForm">
+		<div ng-hide=isVisible>
+		nom d'utilisateur: <input type="text" ng-model="username" placeholder="Entrez votre nom d'utilisateur" required></input>
+		<br>
+		mot de passe: <input type="password" ng-model="password" required=""></input>
+		<input type='submit' ng-disable="loginForm.$invalid" ng-click="login()" name="submit" id="loginSubmit"></input>
+		</div>
+		<div ng-show=isVisible>
+			{{succesMessage}}</br>
+			<button ng-click=logout()>Se deconnecter</button>
+		</div>
+	</form>

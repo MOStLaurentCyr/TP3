@@ -1,0 +1,18 @@
+        <form name="contactForm" ng-hide="contactForm.$submitted">
+    		Nom d'utilisateur: <input autofocus="autofocus" type="text" name="name" ng-model="username" ng-required="true"><span ng-show="contactForm.username.$touched" focus-if>Le nom est requis</span>
+    		<br />
+    		Raison de contact: 
+    		<select name="selectRaison" id="selectRaison" ng-model="subject">
+      			<option value="bugDaffichage">Bug d'affichage</option> 
+      			<option value="ProblèmeDeLogin">Problème de login</option>
+      			<option value="toSpecify">À spécifier</option>
+    		</select><br />
+    		Couriel: <input type="email" name="email" ng-model="email" ng-required="true"/><span ng-show="contactForm.email.$touched && contactForm.email.$invalid">Le couriel est requis</span><br/>
+    		Message: <textarea rows="6" cols="50" name="message" ng-model="message" ng-required="true" ng-maxlength="-1"></textarea><span ng-show="contactForm.message.$touched">Le corps de message est requis</span>
+    		<br>
+    		<button type="submit" ng-click="sendFeedback()" value="Save" ng-disabled="contactForm.$invalid" ng-hide="contactForm.$submitted">Soumettre
+    		</button>
+        </form>
+        <div ng-show="contactForm.$submitted">
+            Message envoyer
+        </div>
